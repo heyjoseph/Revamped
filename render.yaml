@@ -1,0 +1,27 @@
+services:
+  # Static Site for Rohit Kumar SharePoint Architect
+  - type: web
+    name: rohit-sharepoint-architect
+    runtime: static
+    buildCommand: ""
+    publishDirectory: new-site
+    envVars:
+      - key: NODE_VERSION
+        value: "18"
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: X-XSS-Protection
+        value: 1; mode=block
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+    redirects:
+      - source: /old-site/*
+        destination: /new-site/:splat
+        statusCode: 301

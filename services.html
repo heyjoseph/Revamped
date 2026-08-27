@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://rohit-sharepoint-architect.onrender.com/services.html">
+    <meta property="og:title" content="Services | Rohit Kumar - SharePoint Expert">
+    <meta property="og:description" content="Comprehensive SharePoint & Power Platform services by Rohit Kumar. 15+ enterprise services including development, migration, administration, and consulting.">
+    <meta property="og:url" content="https://rohit-sharepoint-architect.onrender.com/services.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://rohit-sharepoint-architect.onrender.com/og-image.jpg">
+
+
+    <meta name="description" content="Comprehensive SharePoint & Power Platform services by Rohit Kumar. 15+ enterprise services including development, migration, administration, and consulting.">
+    <meta name="keywords" content="SharePoint services, Power Platform consulting, Microsoft 365 development, SharePoint migration, Teams integration, Azure services">
+    <meta name="author" content="Rohit Kumar">
+    <meta name="robots" content="index, follow">
+    <title>Services | Rohit Kumar - SharePoint Expert</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ROHITM36501"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ROHITM36501');
+    </script>
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "SharePoint & Power Platform Services",
+      "description": "15+ enterprise Microsoft 365 services including development, migration, administration, and consulting",
+      "provider": {
+        "@type": "Person",
+        "name": "Rohit Kumar",
+        "jobTitle": "SharePoint & Power Platform Expert"
+      },
+      "areaServed": ["India", "Global"],
+      "serviceType": ["SharePoint Consulting", "Power Platform Development", "Microsoft Teams Integration", "Azure Integration"]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="theme-styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #C0C0C0 0%, #FFFFFF 50%, #E8E8E8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glow-border:hover {
+            box-shadow: 0 0 20px rgba(0, 120, 212, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-[#0B0F19] text-white">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#0B0F19]/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold gradient-text">Rohit Kumar</a>
+                <div class="hidden md:flex space-x-8" id="nav-links"></div>
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1920&q=80" alt="Hero background" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0B0F19] via-[#0B0F19]/80 to-[#0B0F19]"></div>
+        </div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold gradient-text mb-6">Services</h1>
+            <p class="text-xl text-gray-400 max-w-3xl">Comprehensive Microsoft 365 solutions tailored for enterprise success. 18+ years of expertise delivering results.</p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid"></div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-6 bg-[#0D121E]">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6 gradient-text">Need a Custom Solution?</h2>
+            <p class="text-xl text-gray-400 mb-8">Discuss your specific requirements with 18+ years of expertise</p>
+            <a href="contact.html" class="px-8 py-4 bg-[#0078D4] hover:bg-[#005a9e] text-white font-semibold rounded-lg transition-all duration-300 glow-border inline-flex items-center gap-2">
+                <i data-lucide="calendar" class="w-5 h-5"></i>
+                Get Custom Quote
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-[#0D121E] border-t border-gray-800"></footer>
+
+    <script src="navigation.js"></script>
+    <script src="footer.js"></script>
+    <script src="services-data.js"></script>
+    <script>
+        // Load all services
+        document.addEventListener('DOMContentLoaded', function() {
+            const servicesGrid = document.getElementById('services-grid');
+            
+            servicesData.forEach(service => {
+                servicesGrid.innerHTML += `
+                    <div class="p-8 bg-[#0D121E] border border-gray-800 rounded-lg hover:border-[#0078D4] transition-all duration-300">
+                        <i data-lucide="${service.lucideIcon}" class="w-12 h-12 mb-4 text-[#0078D4]"></i>
+                        <h3 class="text-xl font-semibold mb-3 text-white">${service.name}</h3>
+                        <p class="text-gray-400 mb-4">${service.description}</p>
+                        <p class="text-gray-500 text-sm mb-4">${service.details}</p>
+                        <a href="contact.html?service=${encodeURIComponent(service.name)}" class="text-[#0078D4] hover:text-[#005a9e] font-medium inline-flex items-center gap-2">
+                            Request Service
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                `;
+            });
+            
+            // Initialize Lucide icons
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+    <script src="theme.js"></script>
+
+</html>

@@ -1,0 +1,91 @@
+/* CSS Variables for Dark/Light Theme */
+:root {
+    /* Light Theme (default) */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-tertiary: #e9ecef;
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a4a4a;
+    --text-muted: #6c757d;
+    --border-color: #dee2e6;
+    --accent-primary: #0078D4;
+    --accent-hover: #005a9e;
+    --accent-secondary: #107C41;
+    --accent-secondary-hover: #0b5c2f;
+    --card-bg: #ffffff;
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --footer-bg: #f8f9fa;
+    --gradient-start: #1a1a1a;
+    --gradient-mid: #333333;
+    --gradient-end: #1a1a1a;
+}
+
+[data-theme="dark"] {
+    /* Dark Theme */
+    --bg-primary: #0B0F19;
+    --bg-secondary: #0D121E;
+    --bg-tertiary: #1a1f2e;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #9ca3af;
+    --border-color: #374151;
+    --accent-primary: #0078D4;
+    --accent-hover: #005a9e;
+    --accent-secondary: #107C41;
+    --accent-secondary-hover: #0b5c2f;
+    --card-bg: #0D121E;
+    --nav-bg: rgba(11, 15, 25, 0.95);
+    --footer-bg: #0D121E;
+    --gradient-start: #C0C0C0;
+    --gradient-mid: #FFFFFF;
+    --gradient-end: #E8E8E8;
+}
+
+/* Apply CSS variables to body */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Override specific Tailwind arbitrary values with CSS variables */
+[class*="bg-\\[#0B0F19\\]"] { background-color: var(--bg-primary) !important; }
+[class*="bg-\\[#0D121E\\]"] { background-color: var(--bg-secondary) !important; }
+[class*="bg-\\[#1a1f2e\\]"] { background-color: var(--bg-tertiary) !important; }
+
+/* Override text colors */
+.text-white { color: var(--text-primary) !important; }
+.text-gray-300 { color: var(--text-secondary) !important; }
+.text-gray-400 { color: var(--text-muted) !important; }
+.text-gray-500 { color: var(--text-muted) !important; }
+
+/* Override border colors */
+.border-gray-800 { border-color: var(--border-color) !important; }
+
+/* Override gradient text */
+.gradient-text {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Override navigation background */
+#navbar {
+    background-color: var(--nav-bg) !important;
+}
+
+/* Override footer background */
+#footer {
+    background-color: var(--footer-bg) !important;
+}
+
+/* Override card backgrounds */
+[class*="bg-\\[#"][class*="\\]"] {
+    background-color: var(--card-bg) !important;
+}
+
+/* Add transitions for smooth theme switching */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
